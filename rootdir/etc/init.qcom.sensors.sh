@@ -1,4 +1,5 @@
-# Copyright (c) 2009-2012, 2014-2016, The Linux Foundation. All rights reserved.
+#!/vendor/bin/sh
+# Copyright (c) 2015,2018 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -25,13 +26,20 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on property:sys.boot_completed=1
-    # Enable ZRAM on boot_complete
-    swapon_all /system/vendor/etc/fstab.qcom
-    write /proc/sys/vm/swappiness 100
+#
+# Function to start sensors for SSC enabled platforms
+#
+start_sensors()
+{
+    sscrpcd_status=`getprop init.svc.vendor.sensors`
+    chmod -h 664 /mnt/vendor/persist/sensors/sensors_settings
+    chown -h -R system.system /mnt/vendor/persist/sensors
+    start vendor.sensors.qti
 
-on property:ro.boot.ram=2GB
-    write /sys/block/zram0/disksize 536870912
+    # Only for SLPI
+    if [ -c /dev/msm_dsps -o -c /dev/sensors ] && [ -z "$sscrpcd_status" ]; then
+        start vendor.sensors
+    fi
+}
 
-on property:ro.boot.ram=3GB
-    write /sys/block/zram0/disksize 805306368
+start_sensors
