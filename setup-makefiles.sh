@@ -19,8 +19,8 @@
 set -e
 
 # Required!
-DEVICE=cedric
-VENDOR=motorola
+DEVICE=PLE
+VENDOR=nokia
 
 INITIAL_COPYRIGHT_YEAR=2017
 
