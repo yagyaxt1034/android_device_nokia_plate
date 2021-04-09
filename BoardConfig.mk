@@ -163,8 +163,8 @@ BOARD_HAVE_FM_RADIO := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_cedric
-TARGET_RECOVERY_DEVICE_MODULES := libinit_cedric
+TARGET_INIT_VENDOR_LIB := libinit_PLE
+TARGET_RECOVERY_DEVICE_MODULES := libinit_PLE
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
@@ -212,33 +212,13 @@ TARGET_RIL_VARIANT := caf
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
-# Sensor
-BOARD_USES_MOT_SENSOR_HUB := true
-BOARD_USES_CAP_SENSOR_SX9310 := true
-MOT_SENSOR_HUB_HW_TYPE_L0 := true
-MOT_AP_SENSOR_HW_REARPROX := true
-MOT_AP_SENSOR_HW_REARPROX_2 := true
-MOT_SENSOR_HUB_HW_AK09912 := true
-MOT_SENSOR_HUB_HW_BMI160 := true
-MOT_SENSOR_HUB_FEATURE_CHOPCHOP := true
-MOT_SENSOR_HUB_FEATURE_LIFT := true
-MOT_SENSOR_HUB_FEATURE_PEDO := true
-MOT_SENSOR_HUB_FEATURE_LA := true
-MOT_SENSOR_HUB_FEATURE_GR := true
-
 TARGET_ENABLE_MEDIADRM_64 := true
-
-# Shim
-TARGET_LD_SHIM_LIBS := \
-    /system/vendor/bin/adspd|libshim_adsp.so \
-    /system/vendor/lib64/libmdmcutback.so|libqsap_shim.so \
-    /system/lib/libjustshoot.so|libjustshoot_shim.so
 
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2018-10-01
+VENDOR_SECURITY_PATCH := 2020-10-01
 
 # VNDK
 PRODUCT_USE_VNDK_OVERRIDE := false
