@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef DEVICE_MOTOROLA_CEDRIC_HEALTH_LEARNEDCAPACITYBACKUPRESTORE_H
-#define DEVICE_MOTOROLA_CEDRIC_HEALTH_LEARNEDCAPACITYBACKUPRESTORE_H
+#ifndef DEVICE_NOKIA_PLE_HEALTH_LEARNEDCAPACITYBACKUPRESTORE_H
+#define DEVICE_NOKIA_PLE_HEALTH_LEARNEDCAPACITYBACKUPRESTORE_H
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
@@ -23,8 +23,8 @@
 #include <string>
 
 namespace device {
-namespace motorola {
-namespace cedric {
+namespace nokia {
+namespace PLE {
 namespace health {
 
 class LearnedCapacityBackupRestore {
@@ -45,8 +45,8 @@ class LearnedCapacityBackupRestore {
 };
 
 }  // namespace health
-}  // namespace cedric
-}  // namespace motorola
+}  // namespace PLE
+}  // namespace nokia
 }  // namespace device
 
-#endif  // #ifndef DEVICE_MOTOROLA_CEDRIC_HEALTH_LEARNEDCAPACITYBACKUPRESTORE_H
+#endif  // #ifndef DEVICE_NOKIA_PLE_HEALTH_LEARNEDCAPACITYBACKUPRESTORE_H

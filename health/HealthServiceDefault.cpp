@@ -27,8 +27,8 @@
 #include "CycleCountBackupRestore.h"
 #include "LearnedCapacityBackupRestore.h"
 
-using ::device::motorola::cedric::health::CycleCountBackupRestore;
-using ::device::motorola::cedric::health::LearnedCapacityBackupRestore;
+using ::device::nokia::PLE::health::CycleCountBackupRestore;
+using ::device::nokia::PLE::health::LearnedCapacityBackupRestore;
 
 static constexpr int kBackupTrigger = 20;
 

@@ -17,8 +17,8 @@
 #include "LearnedCapacityBackupRestore.h"
 
 namespace device {
-namespace motorola {
-namespace cedric {
+namespace nokia {
+namespace PLE {
 namespace health {
 
 static constexpr char kChgFullFile[] = "sys/class/power_supply/bms/charge_full";
@@ -109,6 +109,6 @@ void LearnedCapacityBackupRestore::UpdateAndSave() {
 }
 
 }  // namespace health
-}  // namespace cedric
-}  // namespace motorola
+}  // namespace PLE
+}  // namespace nokia
 }  // namespace device
