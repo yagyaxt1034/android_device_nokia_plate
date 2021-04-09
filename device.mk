@@ -69,7 +69,6 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
-    libshim_adsp \
     libtinycompress \
     audiod \
     libqcomvisualizer \
@@ -103,8 +102,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     android.hardware.camera.provider@2.4-impl \
     vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor \
-    libjustshoot_shim
+    vendor.qti.hardware.camera.device@1.0_vendor
 
 # CarrierConfig
 PRODUCT_PACKAGES += \
@@ -191,8 +189,7 @@ PRODUCT_PACKAGES += \
     libgnsspps \
     android.hardware.gnss@1.1-impl-qti \
     android.hardware.gnss@1.1-service-qti \
-    libqsap_sdk \
-    libqsap_shim
+    libqsap_sdk
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
