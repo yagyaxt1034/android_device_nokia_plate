@@ -106,12 +106,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0_vendor \
     libjustshoot_shim
 
-# Camera Configurations
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/msm8937_mot_camera.xml:system/etc/camera/msm8937_mot_camera.xml \
-    $(LOCAL_PATH)/configs/camera/mot_ov5695_chromatix.xml:system/etc/camera/mot_ov5695_chromatix.xml \
-    $(LOCAL_PATH)/configs/camera/mot_imx258_chromatix.xml:system/etc/camera/mot_imx258_chromatix.xml
-
 # CarrierConfig
 PRODUCT_PACKAGES += \
     CarrierConfig
@@ -147,10 +141,6 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager-V1.0-java
 
-# HotwordEnrollement app permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
-
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
@@ -177,10 +167,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1
-
-# Fingerprint IDC
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc
 
 # FM
 PRODUCT_PACKAGES += \
@@ -299,7 +285,6 @@ PRODUCT_COPY_FILES += \
 
 # Qualcomm
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # Ramdisk
@@ -372,7 +357,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-cedric.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+    $(LOCAL_PATH)/configs/thermal-engine-ple.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 # Touch HAL
 PRODUCT_PACKAGES += \
