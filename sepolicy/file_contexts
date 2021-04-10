@@ -14,9 +14,6 @@
 #binder to fix camera daemon
 /dev/binder(/.*)?                                                             u:object_r:binder_device:s0
 
-# Camera
-/sys/kernel/range(/.*)?                                 u:object_r:sysfs_mmi_laser:s0
-
 # CMActions
 /sys/homebutton(/.*)?                                    u:object_r:sysfs_homebutton:s0
 
@@ -74,14 +71,10 @@
 /dev/akm8963                                             u:object_r:compass_device:s0
 /dev/drv2605                                             u:object_r:haptics_device:s0
 /dev/akm09912                                            u:object_r:compass_device:s0
-/dev/motcamera0                                          u:object_r:camera_device:s0
 /dev/akm8963_dev                                         u:object_r:compass_device:s0
 /dev/stml0xx_akm                                         u:object_r:compass_device:s0
 /dev/akm09912_dev                                        u:object_r:compass_device:s0
-/dev/mot_hob_ram                                         u:object_r:hob_device:s0
 /dev/smd3                                                u:object_r:hci_attach_dev:s0
-
-
 /dev/fb_quickdraw                                        u:object_r:graphics_fb_device:s0
 
 # Partitions
@@ -110,8 +103,6 @@
 /system/vendor/bin/hw/android\.hardware\.power@1\.1-service-qti          u:object_r:hal_power_default_exec:s0
 /system/vendor/radio(/.*)? u:object_r:radio_data_file:s0
 
-/system/vendor/bin/qmi_motext_hook u:object_r:rild_exec:s0
-
 /sys/kernel/debug/rmt_storage(/.*)? u:object_r:debugfs_rmt_storage:s0
 
 # Fingerprint custom hal
@@ -120,18 +111,13 @@
 # Fingerprint custom hal
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-fpcservice u:object_r:hal_fingerprint_default_exec:s0
 
-/(vendor|system/vendor)/bin/hw/android\.hardware\.health@2\.0-service\.cedric        u:object_r:hal_health_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health@2\.0-service\.PLE        u:object_r:hal_health_default_exec:s0
 
-/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service.cedric   u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service.PLE   u:object_r:hal_vibrator_default_exec:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_default                            u:object_r:sysfs_vibrator:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_level                            u:object_r:sysfs_vibrator:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_min                            u:object_r:sysfs_vibrator:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_max                            u:object_r:sysfs_vibrator:s0
 
-/system/vendor/bin/hw/android\.hardware\.light@2\.0-service.cedric        u:object_r:hal_light_default_exec:s0
-/sys/devices/soc/1a00000.qcom,mdss_mdp/1a00000.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight/brightness	u:object_r:sysfs_leds:s0
-/sys/devices/soc/leds-atc-20/leds/charging/brightness	u:object_r:sysfs_leds:s0
-
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine            u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey            u:object_r:hal_drm_clearkey_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.cedric              u:object_r:hal_lineage_touch_default_exec:s0

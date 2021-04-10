@@ -50,7 +50,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_USES_64_BIT_BINDER := true
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := cedric,cedric_retail
+TARGET_OTA_ASSERT_DEVICE := PLE
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)

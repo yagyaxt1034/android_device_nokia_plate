@@ -198,7 +198,7 @@ PRODUCT_PACKAGES += \
 
 # health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-service.cedric
+    android.hardware.health@2.0-service.PLE
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -276,19 +276,28 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.qcom.fm.sh \
-    wlan_carrier_bin.sh
-
-PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.mmi.boot.sh \
-    init.mmi.laser.sh \
-    init.mmi.rc \
-    init.cedric.rc \
-    init.mmi.usb.rc \
+    init.class_main.sh \
+    init.msm.usb.configfs.rc \
+    init.PLE.fingerprint.elan.rc \
+    init.PLE.fingerprint.goodix.rc \
+    init.PLE.fingerprint.rc \
+    init.PLE.nfc.rc \
+    init.ple.smartamp_default.sh \
+    init.ple.smartamp_enable.sh \
+    init.PLE.target.rc \
+    init.qcom.early_boot.sh \
     init.qcom.rc \
-    init.qcom.ril.sh \
-    ueventd.qcom.rc
+    init.qcom.sh \
+    init.qcom.sensors.sh \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.qti.fm.rc \
+    init.qti.fm.sh \
+    init.qti.ims.sh \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    ueventd.rc
 
 # Powerhint configuration file
 PRODUCT_COPY_FILES += \
@@ -346,10 +355,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-ple.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.cedric
-
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
@@ -361,7 +366,7 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service.cedric
+    android.hardware.vibrator@1.0-service.PLE
 
 PRODUCT_PACKAGES += \
     vndk-sp
