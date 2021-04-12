@@ -296,6 +296,7 @@ PRODUCT_PACKAGES += \
     init.qti.fm.sh \
     init.qti.ims.sh \
     init.recovery.qcom.rc \
+    init.recovery.usb.rc \
     init.target.rc \
     ueventd.rc
 
